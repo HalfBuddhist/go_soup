@@ -1,0 +1,3 @@
+[abc]
+server = ["nfs-test", "nfs-prod"]
+path = "/nfs"

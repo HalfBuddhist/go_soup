@@ -1,0 +1,214 @@
+[god_job.usecase]
+latest_day_threshold = 3
+
+[god_job.repo.db]
+db_name = "orca"
+lab_table_name = "lab"
+train_table_name = "train"
+
+[god_job.repo.k8s]
+lab_app_name="lab"
+train_app_name="train-job"
+
+[node.k8s_repo]
+manager_node_label_name = "is_orca_manager"
+compute_node_label_name = "is_orca_node"
+
+[notify.usecase]
+consumer_topic = "NotifyTopic"
+consumer_group = "Notify"
+subscriber_active_threshold = 600
+
+[notify.repo]
+db_name = "orca"
+
+subscriber_table_name = "subscriber"
+lab_table_name = "lab"
+train_table_name = "train"
+serving_table_name = "serving"
+
+[serving]
+app_name = "serving"
+
+[serving.interface]
+min_port = 1024
+max_port = 65535
+
+[serving.mq_repo]
+consumer_topic = "WatchTopic"
+consumer_group = "ServingWatch"
+consumer_tag = "Serving"
+producer_topic = "NotifyTopic"
+producer_group = "Notify"
+
+[serving.docker_repo]
+base_image = "harbor.ainnovation.com/serving/serving-base:3.0"
+repo_base = "harbor.ainnovation.com/serving"
+maintainer = "orca"
+
+[serving.k8s_repo]
+fs_source_type = "nfs"
+[serving.k8s_repo.nfs]
+server = ["nfs-test"]
+path = "/nfs"
+
+[serving.db_repo]
+db_name = "orca"
+serving_table_name = "serving"
+
+[lab]
+app_name = "lab"
+
+[lab.k8s_repo]
+web_ide_port = 8888
+terminal_port = 22
+visualization_port = 6006
+vnc_port = 5901
+args = "jupyter notebook --allow-root --config /workspace/config/jupyter_config.py"
+public_space_app_name = "public-space"
+fs_source_type = "nfs"
+[lab.k8s_repo.nfs]
+server = ["nfs-test"]
+path = "/nfs"
+
+[lab.db_repo]
+db_name = "orca"
+lab_table_name = "lab"
+
+[lab.mq_repo]
+consumer_topic = "WatchTopic"
+consumer_group = "LabWatch"
+consumer_tag = "Lab"
+producer_topic = "NotifyTopic"
+producer_group = "Notify"
+
+[lab.cc_repo]
+container_commiter_topic = "ContainerCommitTopic"
+container_commiter_group = "ContainerCommiter"
+
+[lab.usecase]
+jupyter_config_template_path = "jupyter_config_template.py"
+
+[train]
+app_name = "train-job"
+
+[train.mq_repo]
+consumer_topic = "WatchTopic"
+consumer_group = "TrainWatch"
+consumer_tag = "Train"
+producer_topic = "NotifyTopic"
+producer_group = "Notify"
+
+[train.docker_repo]
+repo_base = "harbor.ainnovation.com/train"
+maintainer = "orca"
+
+[train.k8s_repo]
+logs_tailn = 200
+public_space_app_name = "public-space"
+fs_source_type = "nfs"
+[train.k8s_repo.nfs]
+server = ["nfs-test"]
+path = "/nfs"
+
+[train.db_repo]
+db_name = "orca"
+train_table_name = "train"
+
+[public_space]
+app_name = "public-space"
+
+[public_space.k8s_repo]
+fs_source_type = "nfs"
+[public_space.k8s_repo.nfs]
+server = ["nfs-test"]
+path = "/nfs"
+
+[watch.usecase]
+topic = "WatchTopic"
+group = "Watch"
+
+[watch.db_repo]
+db_name = "orca"
+lab_table_name = "lab"
+train_table_name = "train"
+serving_table_name = "serving"
+
+[container_commiter.usecase]
+consumer_topic = "ContainerCommitTopic"
+consumer_group = "ContainerCommiter"
+
+[image.docker_repo]
+repo_base = "harbor.ainnovation.com"
+maintainer = "orca"
+
+[image.storage_repo]
+dockerfile_template_dir = "without_gpu/"
+gpu_dockerfile_template_dir = "with_gpu/"
+
+[image.db_repo]
+db_name = "orca"
+image_table_name = "image"
+
+[database]
+host = "mongodb-test:30000"
+username = "autodeep"
+password = "autodeep@MLI"
+connect_timeout = 5
+
+[docker]
+host = "unix:///var/run/docker.sock"
+api_version = "v1.32"
+repo_url = "https://harbor.ainnovation.com/"
+repo_user = "admin"
+repo_password = "password4admin"
+
+[storage]
+global_mount_path = "/storage"
+public_space_base = "public"
+data_path = "data"
+model_path = "model"
+serving_path = "serving"
+train_path = "train"
+workspace_path = "workspace"
+image_path = "image"
+
+[mq]
+host = "http://rocketmq-test:9876"
+
+[monitoring]
+address = "http://prometheus-k8s.monitoring.svc.cluster.local:9090"
+request_timeout_in_ms = 500
+
+[kubernetes]
+orca_node_selector_tag = "is_orca_node"
+in_cluster = true
+kube_conf = "test.kubeconfig"
+harbor_secret_name = "secret4harbor"
+
+# gpu mode:
+#  "":        not use gpu
+#  "nvidia":  use nvidia-gpu strategy, exclusive mode
+#             mem-key: not support
+#             core-key: nvidia.com/gpu, num of device
+#  "acs":     use aliyun gpu share strategy
+#             mem-key: aliyun.com/gpu-mem, GiB
+#             core-key: not support
+#  "tke":     use tencent gpu share strategy
+#             mem-key: tencent.com/vcuda-memory, "1" mean 256MBi gpu mem
+#             core-key: tencent.com/vcuda-core, "1" mean 1% of a gpu card
+#                       either the multiple of 100 or any value smaller than 100
+single_gpu_mode = "tke"
+single_gpu_mem_resource_name = "tencent.com/vcuda-memory"
+single_gpu_core_resource_name = "tencent.com/vcuda-core"
+single_gpu_mem_unit = 256
+single_gpu_core_unit = 1
+
+multi_gpu_mode = "tke"
+multi_gpu_mem_resource_name = "tencent.com/vcuda-memory"
+multi_gpu_core_resource_name = "tencent.com/vcuda-core"
+multi_gpu_mem_unit = 256
+multi_gpu_core_unit = 1
+
+seldon_sklearn_image = "seldonio/sklearnserver:1.9.1"
+seldon_tensorflow_image = "seldonio/tfserving-proxy:1.9.1"
