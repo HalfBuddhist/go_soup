@@ -1,5 +1,5 @@
 // test slice convert in O(1) using reflect.
-package main
+package ts_slice
 
 import (
 	"fmt"

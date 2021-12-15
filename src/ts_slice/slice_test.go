@@ -1,4 +1,4 @@
-package main
+package ts_slice
 
 import (
 	"fmt"

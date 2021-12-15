@@ -14,6 +14,7 @@ func TestRandGen(t *testing.T) {
 	seedTime := time.Now()
 	fmt.Println(seedTime)
 	rand.Seed(seedTime.Unix())
+	// rand.Seed(seedTime.UnixNano())
 
 	fmt.Println(rand.Int())       // int随机值，返回值为int
 	fmt.Println(rand.Intn(100))   // [0,100)的随机值，返回值为int
