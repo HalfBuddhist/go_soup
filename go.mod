@@ -39,9 +39,10 @@ replace (
 require (
 	code.google.com/p/go.crypto v0.0.0-00010101000000-000000000000 // indirect
 	github.com/coreos/go-etcd v2.0.0+incompatible // indirect
+	github.com/imdario/mergo v0.3.8
 	github.com/spf13/viper v1.6.2
 	github.com/stretchr/testify v1.6.1
 	github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77
 )
 
-go 1.14
+go 1.16
