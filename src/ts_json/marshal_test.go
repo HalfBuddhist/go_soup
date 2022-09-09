@@ -9,6 +9,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+type TestStruct struct {
+	Name  string
+	Score map[string]int
+}
+
 // json 转化为字符串
 func TestMarshal(t *testing.T) {
 	jsonObj := map[string]interface{}{
@@ -33,9 +38,9 @@ func TestUnmarshal(t *testing.T) {
 
 // json 字符串转化为 map 对象
 // 将数字转化为 json.Number, 实际就是字符串。
-// 如果想要转化成对应的类型，比如 long, int, 
+// 如果想要转化成对应的类型，比如 long, int,
 // 还是要将字符串 decode 或者 unmarhsal 到拥有具体类型的 struct 中去，期间类型会自动转化的。
-func TestDecoderUnmarshal(t *testing.T){
+func TestDecoderUnmarshal(t *testing.T) {
 	jsonStr := `{"key1":11,"key2":22}`
 	jsonObj := map[string]interface{}{}
 	decoder := json.NewDecoder(strings.NewReader(jsonStr))
@@ -44,4 +49,19 @@ func TestDecoderUnmarshal(t *testing.T){
 	assert.NoError(t, err)
 	fmt.Println(jsonObj)
 	fmt.Printf("%#v:%T\n", jsonObj["key1"], jsonObj["key1"])
+}
+
+// 域类型为map，在没有值的json串时，其值会是如何的？
+// conclusion: 是 nil.
+func TestMapWithZeroValueInStrWhenUnmarshal(t *testing.T) {
+	jsonStr := `{"Name": "hello"}`
+	testStruct := TestStruct{}
+	err := json.Unmarshal([]byte(jsonStr), &testStruct)
+	assert.NoError(t, err)
+	fmt.Printf("%+v\n", testStruct)
+	if testStruct.Score == nil {
+		fmt.Println("Map is nil.")
+	} else {
+		fmt.Println("Map is not nil.")
+	}
 }

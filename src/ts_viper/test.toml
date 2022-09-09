@@ -1,0 +1,7 @@
+[abc]
+server = ["nfs-test", "nfs-prod"]
+path = "/nfs"
+
+[EDF]
+path="abc"
+name="hello"

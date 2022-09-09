@@ -23,6 +23,11 @@ type Serving2 struct {
 	Traffic *Traffic
 }
 
+type Serving3 struct {
+	Name     string
+	Traffics []*Traffic
+}
+
 // 空值不会进行赋值
 func TestMergeDefaultValue(t *testing.T) {
 	originServing := &Serving{
@@ -42,7 +47,7 @@ func TestMergeDefaultValue(t *testing.T) {
 	fmt.Println(defaultStruct)
 
 	// WithTypeCheck
-	mergo.Merge(originServing, defaultStruct, 
+	mergo.Merge(originServing, defaultStruct,
 		mergo.WithOverride, mergo.WithTypeCheck)
 	fmt.Println(originServing)
 	fmt.Println(defaultStruct)
@@ -88,7 +93,7 @@ func TestMergeDefaultValueNest(t *testing.T) {
 			Value:  "origin_value",
 		},
 	}
-	mergo.Merge(originServing, newStruct, 
+	mergo.Merge(originServing, newStruct,
 		mergo.WithOverride, mergo.WithTypeCheck)
 	fmt.Println(originServing)
 	fmt.Println(newStruct)
@@ -148,7 +153,7 @@ func TestMergeZeroPointer(t *testing.T) {
 // v0.3.6: merge 会改变指针指向，为非零值时，不合理；为零值时，不会改变其指向；
 func TestMergePointer(t *testing.T) {
 	originServing := &Serving2{
-		Name: "orgin",
+		Name: "origin",
 		Traffic: &Traffic{
 			Header: "origin_header",
 			Value:  "origin_value",
@@ -169,5 +174,41 @@ func TestMergePointer(t *testing.T) {
 
 	fmt.Println(originServing)
 	fmt.Println(originServing.Traffic)
+	fmt.Println(newStruct)
+}
+
+// 问题： 结构体中的切片成员时在 merge 时的行为。
+// 结论： v0.3.8 新列表完全替换掉旧列表。
+func TestMergeSlice(t *testing.T) {
+	originServing := &Serving3{
+		Name: "origin",
+		Traffics: []*Traffic{{
+			Header: "origin_header_1",
+			Value:  "origin_value_1",
+		}, {
+			Header: "origin_header_2",
+			Value:  "origin_value_2",
+		},
+		},
+	}
+	newStruct := &Serving3{
+		Name: "new",
+		Traffics: []*Traffic{{
+			Header: "new_header_1",
+			Value:  "new_value_1",
+		}, {
+			Header: "new_header_2",
+			Value:  "new_value_2",
+		},
+		},
+	}
+
+	fmt.Println(originServing)
+	fmt.Println(newStruct)
+
+	mergo.Merge(originServing, newStruct, mergo.WithOverride)
+
+	fmt.Println(originServing)
+	fmt.Println(originServing.Traffics)
 	fmt.Println(newStruct)
 }
