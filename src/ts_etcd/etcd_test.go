@@ -14,8 +14,7 @@ import (
 
 var etcd_nodes = []string{
 	"https://10.18.96.172:2379",
-	"https://10.18.96.171:2379",
-	"https://10.18.96.174:2379"}
+	"https://10.18.96.171:2379"}
 
 const configKey = "/etcd_test"
 const remoteConfType = "toml"

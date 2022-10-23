@@ -14,6 +14,7 @@ func TestIterateOnNilSlice(t *testing.T) {
 	// y := &abc{"123", "456"}
 	// var x []*abc = nil
 	x := []*abc{{"123", "456"}, {"1234", "3456"}}
+	fmt.Printf("Length: %d\n", len(x))
 	for idx, item := range x {
 		fmt.Println(idx, item)
 	}
