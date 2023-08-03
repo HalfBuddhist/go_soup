@@ -13,6 +13,21 @@
 			"env": {
 				"GOMAXPROCS": "10"
 			},
+		},
+		{
+			"name": "Launch file with gluster",
+			"type": "go",
+			"request": "launch",
+			"mode": "debug",
+			"program": "${workspaceFolder}/src/ts_gogfapi/main.go",
+			// "buildFlags": [
+			// 	"-ldflags='-s -w'"
+			// ],
+			// "buildFlags": "-ldflags '-L/usr/lib/x86_64-linux-gnu -I/usr/include/glusterfs -I/usr/include/x86_64-linux-gnu -I/usr/include/x86_64-linux-gnu/bits -I/usr/include/x86_64-linux-gnu/bits/types'",
+			"env": {
+				"GOMAXPROCS": "10",
+				"CGO_ENABLED": "1"
+			},
 		}
 	]
 }

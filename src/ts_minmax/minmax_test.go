@@ -2,6 +2,7 @@ package ts_minmax
 
 import (
 	"fmt"
+	"math"
 	"testing"
 )
 
@@ -15,4 +16,9 @@ func TestIntMinMax(t *testing.T) {
 	const UINT_MIN uint = 0
 	const UINT_MAX uint = ^uint(0)
 	fmt.Println(UINT_MIN, UINT_MAX)
+}
+
+func TestInt64MinMax(t *testing.T) {
+	fmt.Println(math.MaxInt64)
+	fmt.Println(math.MinInt64)
 }

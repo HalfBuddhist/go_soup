@@ -4,9 +4,10 @@ package ts_regex
 import (
 	"fmt"
 	"regexp"
+	"testing"
 )
 
-func TS_regex_uuid() {
+func Test_regex_uuid(t *testing.T) {
 	fmt.Println("hello")
 
 	pattern := `[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}`

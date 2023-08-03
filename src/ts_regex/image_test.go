@@ -1,4 +1,3 @@
-// 匹配 UUID
 package ts_regex
 
 import (

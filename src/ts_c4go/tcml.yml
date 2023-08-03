@@ -1,0 +1,78 @@
+---
+GENERATOR:
+  PackageName: tcml
+  PackageDescription: "Package go-tcml provides Go bindings for tcml implementation"
+  PackageLicense: |
+    Copyright (c) 2024 xxx Co., Ltd. All rights reserved.
+
+    NOTICE TO LICENSE:
+    This source code and/or documentation ("Licensed Deliverables") are subject
+    to xxx intellectual property rights under CHINA and
+    international Copyright laws.
+
+    These Licensed Deliverables contained herein is PROPRIETARY and CONFIDENTIAL
+    to xxx and is being provided under the terms and conditions of a
+    form of xxx software license agreement by and between xxx and
+    Licensee ("License Agreement") or electronically accepted by Licensee.
+
+    Notwithstanding any terms or conditions to the contrary in the License
+    Agreement, reproduction or disclosure of the Licensed Deliverables to any
+    third party without the express written consent of xxx is prohibited.
+
+    NOTWITHSTANDING ANY TERMS OR CONDITIONS TO THE CONTRARY IN THE LICENSE
+    AGREEMENT, xxx MAKES NO REPRESENTATION ABOUT THE SUITABILITY OF THESE
+    LICENSED DELIVERABLES FOR ANY PURPOSE.  IT IS PROVIDED "AS IS" WITHOUT
+    EXPRESS OR IMPLIED WARRANTY OF ANY KIND. xxx DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THESE LICENSED DELIVERABLES, INCLUDING ALL IMPLIED WARRANTIES
+    OF MERCHANTABILITY,NONINFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE.
+
+    NOTWITHSTANDING ANY TERMS OR CONDITIONS TO THE CONTRARY IN THE LICENSE
+    AGREEMENT, IN NO EVENT SHALL xxx BE LIABLE FOR ANY SPECIAL, INDIRECT,
+    INCIDENTAL, OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING
+    FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+    NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH
+    THE USE OR PERFORMANCE OF THESE LICENSED DELIVERABLES.
+  Includes: ["tcml.h", "stdlib.h"]
+
+PARSER:
+  IncludePaths:
+    - /usr/include
+  SourcesPaths:
+    - tcml.h
+
+TRANSLATOR:
+  ConstCharIsString: true
+  ConstUCharIsString: false
+  ConstRules:
+    defines: eval
+    enum: eval
+  Rules:
+    global:
+      - { action: accept, from: "^tcml" }
+      - { action: accept, from: "^TCML" }
+      - { action: replace, from: "_t$" }
+      - { transform: export }
+    type:
+      - { action: accept, from: "^tcml" }
+      - { action: accept, from: "^TCML" }
+      - { action: replace, from: "_t$" }
+      - { action: replace, from: "^TCML" }
+      - { action: replace, from: "^tcml" }
+      - { action: replace, from: "^Tcml" }
+    const:
+      - transform: upper
+      - { action: accept, from: "^tcml" }
+      - { action: accept, from: "^TCML" }
+      - { action: replace, from: "_t$" }
+      - { action: replace, from: "^TCML_" }
+      - { action: replace, from: "^tcml_" }
+      - { action: replace, from: "_", to: "__" }
+    function:
+      - { action: accept, from: "^tcml" }
+      - { action: accept, from: "^TCML" }
+      - { action: replace, from: "_t$" }
+    private:
+      - transform: unexport
+    post-global:
+      - { transform: export }
+      - { load: snakecase }

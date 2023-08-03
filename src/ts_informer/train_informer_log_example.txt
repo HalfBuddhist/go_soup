@@ -1,0 +1,18 @@
+VCJob added at 2024-09-10 14:04:31.793741454 +0800 CST m=+44.491690918: kubecube-project-43 train-job-vflhqflfpc at 2024-09-10 14:04:31 +0800 CST, version=410656357
+VCJob updated at 2024-09-10 14:04:31.804933173 +0800 CST m=+44.502882636: kubecube-project-43 train-job-vflhqflfpc to Pending, version=410656358
+Pod added at 2024-09-10 14:04:33.364675934 +0800 CST m=+46.062625411: kubecube-project-43 train-job-vflhqflfpc-master-0 at 2024-09-10 14:04:33 +0800 CST, version=410656378
+VCJob updated at 2024-09-10 14:04:33.385139723 +0800 CST m=+46.083089190: kubecube-project-43 train-job-vflhqflfpc to Pending, version=410656379
+VCJob updated at 2024-09-10 14:04:33.426064564 +0800 CST m=+46.124014038: kubecube-project-43 train-job-vflhqflfpc to Pending, version=410656383
+Pod updated at 2024-09-10 14:04:34.306687175 +0800 CST m=+47.004636652: kubecube-project-43 train-job-vflhqflfpc-master-0 to Pending, version=410656389
+Pod updated at 2024-09-10 14:04:34.341933229 +0800 CST m=+47.039882703: kubecube-project-43 train-job-vflhqflfpc-master-0 to Pending, version=410656397
+Pod updated at 2024-09-10 14:04:35.617176343 +0800 CST m=+48.315125820: kubecube-project-43 train-job-vflhqflfpc-master-0 to Running, version=410656413
+VCJob updated at 2024-09-10 14:04:35.625566987 +0800 CST m=+48.323516446: kubecube-project-43 train-job-vflhqflfpc to Running, version=410656415
+VCJob updated at 2024-09-10 14:04:35.667389063 +0800 CST m=+48.365338527: kubecube-project-43 train-job-vflhqflfpc to Running, version=410656417
+VCJob updated at 2024-09-10 14:04:35.730994071 +0800 CST m=+48.428943544: kubecube-project-43 train-job-vflhqflfpc to Running, version=410656421
+Pod updated at 2024-09-10 14:05:36.11491329 +0800 CST m=+108.812862760: kubecube-project-43 train-job-vflhqflfpc-master-0 to Running, version=410656939
+Pod updated at 2024-09-10 14:05:38.211862574 +0800 CST m=+110.909812038: kubecube-project-43 train-job-vflhqflfpc-master-0 to Succeeded, version=410656957
+VCJob updated at 2024-09-10 14:05:38.238412847 +0800 CST m=+110.936362311: kubecube-project-43 train-job-vflhqflfpc to Completing, version=410656960
+VCJob updated at 2024-09-10 14:05:38.27734707 +0800 CST m=+110.975296533: kubecube-project-43 train-job-vflhqflfpc to Completed, version=410656966
+VCJob updated at 2024-09-10 14:05:38.30311445 +0800 CST m=+111.001063916: kubecube-project-43 train-job-vflhqflfpc to Completed, version=410656968
+VCJob updated at 2024-09-10 14:05:38.367872616 +0800 CST m=+111.065822080: kubecube-project-43 train-job-vflhqflfpc to Completed, version=410656969
+VCJob updated at 2024-09-10 14:05:38.389493985 +0800 CST m=+111.087443452: kubecube-project-43 train-job-vflhqflfpc to Completed, version=410656970

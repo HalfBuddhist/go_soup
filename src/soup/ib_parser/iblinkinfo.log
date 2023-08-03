@@ -1,0 +1,102 @@
+CA: Mellanox Technologies Aggregation Node:
+      0xb83fd20300e85ee0      2    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   41[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: dev-node1 mlx5_1:
+      0xe8ebd30300d632d9      5    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   40[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: dev-node5 mlx5_1:
+      0xe8ebd30300d63219      3    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   38[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: uat-master3 mlx5_1:
+      0xe8ebd30300d631c9      4    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   37[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client01 HCA-1:
+      0x0c42a103005f5030     30    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   32[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: node02 HCA-1:
+      0xb83fd20300bd8da2     21    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   29[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client01 HCA-2:
+      0x946dae03008bcc98     22    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   27[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client04 HCA-2:
+      0x946dae03008bee98     29    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   24[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: node1 mlx5_1:
+      0xb83fd20300bec273     13    1[  ] ==( 4X      25.78125 Gbps Active/  LinkUp)==>       1   23[  ] "MF0;SW-IB:MQM8700/U1" ( Could be 53.125 Gbps)
+CA: MT4123 ConnectX6   Mellanox Technologies:
+      0xb83fd20300bec413     14    1[  ] ==( 4X      25.78125 Gbps Active/  LinkUp)==>       1   22[  ] "MF0;SW-IB:MQM8700/U1" ( Could be 53.125 Gbps)
+CA: node3 mlx5_1:
+      0xb83fd20300bec4b3     15    1[  ] ==( 4X      25.78125 Gbps Active/  LinkUp)==>       1   21[  ] "MF0;SW-IB:MQM8700/U1" ( Could be 53.125 Gbps)
+CA: node01 HCA-1:
+      0x08c0eb0300e60a3e      6    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   20[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: node01 HCA-2:
+      0x946dae03008bd5c8     18    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   19[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: node02 HCA-2:
+      0x946dae03008bd5d4     19    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   18[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client05 HCA-1:
+      0x946dae03009cf718     26    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   17[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: node03 HCA-1:
+      0xb83fd20300bd8dae     17    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   16[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: node03 HCA-2:
+      0x946dae03008bd5dc     20    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   15[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client03 HCA-1:
+      0xb83fd20300bd8d8e     28    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   12[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client03 HCA-2:
+      0x946dae03008bee9c     23    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   11[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client02 HCA-2:
+      0x946dae03008bcca0     25    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   10[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client02 HCA-1:
+      0xb8cef60300a61da0     24    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    9[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client04 HCA-1:
+      0x946dae03009cc564     27    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    8[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: client05 HCA-2:
+      0x946dae03009cf764     31    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    7[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: dev-node3 mlx5_1:
+      0xe8ebd30300d632f1      7    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    6[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: uat-node1 mlx5_1:
+      0xe8ebd30300d632c1     12    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    5[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: dev-node4 mlx5_1:
+      0xe8ebd30300d62fb1     10    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    4[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: uat-node2 mlx5_1:
+      0xe8ebd30300d63251      8    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    3[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: uat-node3 mlx5_1:
+      0xe8ebd30300d62fe1      9    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    2[  ] "MF0;SW-IB:MQM8700/U1" ( )
+CA: uat-node4 mlx5_1:
+      0xe8ebd30300d63259     11    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1    1[  ] "MF0;SW-IB:MQM8700/U1" ( )
+Switch: 0xb83fd20300e85ed8 MF0;SW-IB:MQM8700/U1:
+           1    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      11    1[  ] "uat-node4 mlx5_1" ( )
+           1    2[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       9    1[  ] "uat-node3 mlx5_1" ( )
+           1    3[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       8    1[  ] "uat-node2 mlx5_1" ( )
+           1    4[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      10    1[  ] "dev-node4 mlx5_1" ( )
+           1    5[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      12    1[  ] "uat-node1 mlx5_1" ( )
+           1    6[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       7    1[  ] "dev-node3 mlx5_1" ( )
+           1    7[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      31    1[  ] "client05 HCA-2" ( )
+           1    8[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      27    1[  ] "client04 HCA-1" ( )
+           1    9[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      24    1[  ] "client02 HCA-1" ( )
+           1   10[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      25    1[  ] "client02 HCA-2" ( )
+           1   11[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      23    1[  ] "client03 HCA-2" ( )
+           1   12[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      28    1[  ] "client03 HCA-1" ( )
+           1   13[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   14[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   15[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      20    1[  ] "node03 HCA-2" ( )
+           1   16[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      17    1[  ] "node03 HCA-1" ( )
+           1   17[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      26    1[  ] "client05 HCA-1" ( )
+           1   18[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      19    1[  ] "node02 HCA-2" ( )
+           1   19[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      18    1[  ] "node01 HCA-2" ( )
+           1   20[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       6    1[  ] "node01 HCA-1" ( )
+           1   21[  ] ==( 4X      25.78125 Gbps Active/  LinkUp)==>      15    1[  ] "node3 mlx5_1" ( Could be 53.125 Gbps)
+           1   22[  ] ==( 4X      25.78125 Gbps Active/  LinkUp)==>      14    1[  ] "MT4123 ConnectX6   Mellanox Technologies" ( Could be 53.125 Gbps)
+           1   23[  ] ==( 4X      25.78125 Gbps Active/  LinkUp)==>      13    1[  ] "node1 mlx5_1" ( Could be 53.125 Gbps)
+           1   24[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      29    1[  ] "client04 HCA-2" ( )
+           1   25[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   26[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   27[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      22    1[  ] "client01 HCA-2" ( )
+           1   28[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   29[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      21    1[  ] "node02 HCA-1" ( )
+           1   30[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   31[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   32[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      30    1[  ] "client01 HCA-1" ( )
+           1   33[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   34[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   35[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   36[  ] ==(                Down/ Polling)==>             [  ] "" ( )
+           1   37[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       4    1[  ] "uat-master3 mlx5_1" ( )
+           1   38[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       3    1[  ] "dev-node5 mlx5_1" ( )
+           1   39[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>      16    1[  ] "dev-node2 mlx5_1" ( )
+           1   40[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       5    1[  ] "dev-node1 mlx5_1" ( )
+           1   41[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       2    1[  ] "Mellanox Technologies Aggregation Node" ( )
+CA: dev-node2 mlx5_1:
+      0xe8ebd30300d63211     16    1[  ] ==( 4X        53.125 Gbps Active/  LinkUp)==>       1   39[  ] "MF0;SW-IB:MQM8700/U1" ( )

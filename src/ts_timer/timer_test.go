@@ -37,3 +37,14 @@ func TestTimerUsage(t *testing.T) {
 	fmt.Println("结束时间：", time.Now().Format("2006-01-02 15:04:05"))
 	fmt.Println("ok")
 }
+
+// 使用 AfterFunc 方法，在指定时间后执行回调函数, 不阻塞主线程
+func TestTimerAfterFunc(t *testing.T) {
+	fmt.Println("开始时间：", time.Now().Format("2006-01-02 15:04:05"))
+	time.AfterFunc(5*time.Second, func() {
+		fmt.Println("5秒后, 我执行了")
+	})
+	fmt.Println("等待5秒")
+	time.Sleep(10 * time.Second)
+	fmt.Println("结束时间：", time.Now().Format("2006-01-02 15:04:05"))
+}
