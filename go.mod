@@ -8,7 +8,6 @@ replace (
 	github.com/kubeflow/pytorch-operator => github.com/linquanisaac/pytorch-operator v1.1.0
 	github.com/kubernetes-sigs/kube-batch => github.com/kubernetes-sigs/kube-batch v0.0.0-20200414051246-2e934d1c8860
 	github.com/xordataexchange/crypt => github.com/xordataexchange/crypt v0.0.2
-	google.golang.org/grpc => google.golang.org/grpc v1.23.1
 	k8s.io/api => k8s.io/api v0.17.2
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.17.2
 	k8s.io/apimachinery => k8s.io/apimachinery v0.17.2
