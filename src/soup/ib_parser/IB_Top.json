@@ -1,0 +1,400 @@
+[
+    {
+        "ID": "leaf",
+        "Type": 1,
+        "Connect": [
+            {
+                "Dest": "uat-node4",
+                "Weight": 1
+            },
+            {
+                "Dest": "uat-node3",
+                "Weight": 1
+            },
+            {
+                "Dest": "uat-node2",
+                "Weight": 1
+            },
+            {
+                "Dest": "dev-node4",
+                "Weight": 1
+            },
+            {
+                "Dest": "uat-node1",
+                "Weight": 1
+            },
+            {
+                "Dest": "dev-node3",
+                "Weight": 1
+            },
+            {
+                "Dest": "client05",
+                "Weight": 1
+            },
+            {
+                "Dest": "client04",
+                "Weight": 1
+            },
+            {
+                "Dest": "client02",
+                "Weight": 1
+            },
+            {
+                "Dest": "client02",
+                "Weight": 1
+            },
+            {
+                "Dest": "client03",
+                "Weight": 1
+            },
+            {
+                "Dest": "client03",
+                "Weight": 1
+            },
+            {
+                "Dest": "node03",
+                "Weight": 1
+            },
+            {
+                "Dest": "node03",
+                "Weight": 1
+            },
+            {
+                "Dest": "client05",
+                "Weight": 1
+            },
+            {
+                "Dest": "node02",
+                "Weight": 1
+            },
+            {
+                "Dest": "node01",
+                "Weight": 1
+            },
+            {
+                "Dest": "node01",
+                "Weight": 1
+            },
+            {
+                "Dest": "node3",
+                "Weight": 1
+            },
+            {
+                "Dest": "node1",
+                "Weight": 1
+            },
+            {
+                "Dest": "client04",
+                "Weight": 1
+            },
+            {
+                "Dest": "client01",
+                "Weight": 1
+            },
+            {
+                "Dest": "node02",
+                "Weight": 1
+            },
+            {
+                "Dest": "client01",
+                "Weight": 1
+            },
+            {
+                "Dest": "uat-master3",
+                "Weight": 1
+            },
+            {
+                "Dest": "dev-node5",
+                "Weight": 1
+            },
+            {
+                "Dest": "dev-node2",
+                "Weight": 1
+            },
+            {
+                "Dest": "dev-node1",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "uat-node4",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "uat-node3",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "uat-node2",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "dev-node4",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "uat-node1",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "dev-node3",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client05",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client04",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client02",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client02",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client03",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client03",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node03",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node03",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client05",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node02",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node01",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node01",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node3",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node1",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client04",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client01",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "node02",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "client01",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "uat-master3",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "dev-node5",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "dev-node2",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    },
+    {
+        "ID": "dev-node1",
+        "Type": 0,
+        "Connect": [
+            {
+                "Dest": "leaf",
+                "Weight": 1
+            }
+        ]
+    }
+]
